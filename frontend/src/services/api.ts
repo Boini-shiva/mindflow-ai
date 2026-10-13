@@ -14,12 +14,10 @@ const getApiBaseUrl = (): string => {
   if (typeof envUrl === 'string' && envUrl.trim().length > 0) {
     return envUrl.trim().replace(/\/+$/, '');
   }
-  // In production builds without explicit VITE_API_BASE_URL, use relative origin for Vercel rewrites/serverless
-  if (import.meta.env.PROD) {
-    return '';
-  }
-  // Default to local development FastAPI server
-  return 'http://127.0.0.1:8000';
+  // Same-origin by default. On Vercel (and under `vercel dev`) the top-level
+  // service rewrites route /api, /health and /omi to the backend service.
+  // With plain `npm run dev`, the Vite dev-server proxy forwards them to :8000.
+  return '';
 };
 
 const API_BASE_URL = getApiBaseUrl();

@@ -159,20 +159,16 @@ Open [http://localhost:5173](http://localhost:5173) in your browser. The UI will
 
 ## 5. Vercel Deployment Guide
 
-MindFlow AI is pre-configured with root and directory-level `vercel.json` configurations for instant deployment on Vercel:
+MindFlow AI deploys as a single Vercel project using **Vercel Services** (root [`vercel.json`](vercel.json)):
 
-### Option A: Monorepo Deployment (Frontend + FastAPI on Vercel)
-1. Import repository `Boini-shiva/mindflow-ai` on [Vercel](https://vercel.com).
-2. Keep Root Directory as `./`.
-3. Vercel builds the React frontend (`frontend/dist`) and maps API requests (`/api/*`, `/health`, `/omi/*`) to the FastAPI serverless function (`api/index.py`).
-4. Set your environment variables in Vercel project settings (`LYZR_API_KEY`, `QDRANT_URL`, `QDRANT_API_KEY`, etc.).
-5. Deploy!
+- `backend` (`backend/`, FastAPI `main:app`) — public on `/api/*`, `/health`, `/omi`, `/omi/*`, `/webhook/*`, `/docs`, `/openapi.json`.
+- `frontend` (`frontend/`, Vite SPA) — public catch-all `/*`.
 
-### Option B: Split Deployment (Frontend on Vercel + Backend on Render/Railway)
-1. Deploy `backend` on Render/Railway/Fly.io.
-2. Deploy `frontend` on Vercel with Root Directory set to `frontend`.
-3. In Vercel Environment Variables, set `VITE_API_BASE_URL` to your hosted backend URL.
-4. Detailed step-by-step instructions are available in [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md).
+1. Import `Boini-shiva/mindflow-ai` on [Vercel](https://vercel.com) with Root Directory `./`.
+2. Set environment variables (`LYZR_API_KEY`, `QDRANT_URL`, `QDRANT_API_KEY`, etc.).
+3. Deploy. Locally, run everything with `vercel dev`.
+
+See [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md) for details.
 
 ---
 
