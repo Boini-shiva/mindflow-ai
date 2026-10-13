@@ -1,0 +1,2837 @@
+{
+  "memories": [
+    {
+      "id": "fee80a91-c8d6-4401-85b6-fab540b3c759",
+      "user_id": "default_user",
+      "conversation_id": "8746d361-09a9-425f-bc8a-1be0d91d0a7e",
+      "title": "Test Sync",
+      "source": "manual",
+      "timestamp": "2026-10-13T07:34:08.570585+00:00",
+      "transcript": "Met with Sarah and Elena to discuss the latency target. Sarah will finalize the Qdrant specs by Thursday.",
+      "summary": "**Summary**\nA meeting was held with Sarah and Elena to discuss the latency target. Sarah committed to finalizing the Qdrant specs by Thursday.\n\n**Key Points**\n- **Participants:** Sarah and Elena, plus the speaker.\n- **Topic:** The latency target.\n- **Action item:** Sarah will finalize the Qdrant specs.\n- **Not stated:** The latency target value and any outcome of the discussion.\n\n**Decisions**\n- No explicit decisions were recorded.\n- The only confirmed outcome is Sarah's commitment to finalize the Qdrant specs.\n\n**Important Dates**\n- **Thursday:** Deadline for Sarah to finalize the Qdrant specs. No calendar date was given. If this means the coming Thursday, it would be October 15, 2026, but this is inferred, not confirmed.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "19b6baa7-5b13-4f95-8ebe-7adea091796b"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-6133811a1262",
+      "created_at": "2026-10-13T07:34:08.570585+00:00"
+    },
+    {
+      "id": "405d79ee-04a2-4966-a5c4-7ad050a09d9b",
+      "user_id": "default_user",
+      "conversation_id": "fb6030ec-e648-46c5-9812-0758f28d361a",
+      "title": "Security Architecture Review",
+      "source": "manual",
+      "timestamp": "2026-10-12T14:29:19.218419+00:00",
+      "transcript": "We met with Daniel to review the JWT authentication policy. Daniel agreed to implement token rotation with a 15-minute expiration by next Wednesday. Sarah will audit the CORS origin whitelists. We also agreed to enforce rate limiting on the /auth/login endpoint.",
+      "summary": "**Summary**\nThe team met with Daniel to review the JWT authentication policy. Daniel will implement token rotation with a 15-minute expiration by next Wednesday, and Sarah will audit the CORS origin whitelists. The team also agreed to enforce rate limiting on the `/auth/login` endpoint.\n\n**Key Points**\n- **Main topic:** Review of the JWT authentication policy\n- **Participants:** Daniel and Sarah\n- **Daniel:** Will implement JWT token rotation with a 15-minute token expiration.\n- **Sarah:** Will audit the CORS origin whitelists.\n- **Rate limiting:** Will be enforced on the `/auth/login` endpoint.\n- **Not stated in the transcript:**\n  - Who will implement the rate limiting\n  - The deadline for Sarah's CORS audit\n\n**Decisions**\n1. Implement token rotation with a 15-minute expiration (owner: Daniel).\n2. Audit the CORS origin whitelists (owner: Sarah).\n3. Enforce rate limiting on the `/auth/login` endpoint (owner not specified).\n\n**Important Dates**\n- **Next Wednesday:** Deadline for Daniel's token rotation work. No exact calendar date was given, and the meeting date is not stated, so the specific date cannot be confirmed.\n- **Sarah's CORS audit:** No deadline mentioned.\n- **Rate limiting:** No deadline mentioned.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "bc40542c-bf09-43c5-90c1-759716a0c70b",
+        "af48a093-360d-4b3f-a74b-ce352d5dc952",
+        "7fbcb505-bfcc-4066-8aa5-79be9a55c719"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-1bc8c7e80281",
+      "created_at": "2026-10-12T14:29:19.218419+00:00"
+    },
+    {
+      "id": "c3cdd725-4cd6-45d0-aa01-4985f16fbaaa",
+      "user_id": "default_user",
+      "conversation_id": "2565a8c2-0f69-4a0d-8800-f6040293d73e",
+      "title": "Omi Voice Note (a60713d7)",
+      "source": "omi",
+      "timestamp": "2026-10-12T14:24:31.699143+00:00",
+      "transcript": "Quick note: need to verify API token renewal with the security team on Monday.",
+      "summary": "",
+      "topics": [],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "f026a15c-b641-4797-93b7-08038c057aca"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-omi-a99e84ff",
+      "created_at": "2026-10-12T14:24:31.699143+00:00"
+    },
+    {
+      "id": "7d586ab6-db3f-457c-a37e-7288081cc8c0",
+      "user_id": "default_user",
+      "conversation_id": "b14c88fa-d64a-4b9b-b989-38f3c3441c1c",
+      "title": "Redis Architecture & Latency Alignment",
+      "source": "voice",
+      "timestamp": "2026-10-12T14:24:06.932373+00:00",
+      "transcript": "Meeting with Jordan and Maya on Redis architecture. We agreed to deploy the new caching layer by next Tuesday. Jordan will configure the Redis cluster and sentinel nodes by Friday. Maya is responsible for updating the API gateway routes. We also confirmed the benchmark latency target must stay under 50 milliseconds under 10k RPS.",
+      "summary": "## Summary\nJordan, Maya, and the speaker met to discuss Redis architecture. They agreed to deploy a new caching layer by next Tuesday and assigned tasks to Jordan and Maya. They also confirmed a performance target: benchmark latency must stay under 50 milliseconds at 10k RPS.\n\n## Key Points\n- **Topic:** Redis architecture and deployment of a new caching layer\n- **Participants:** Jordan, Maya, and the speaker\n- **Jordan:** Will configure the Redis cluster and sentinel nodes.\n- **Maya:** Is responsible for updating the API gateway routes.\n- **Performance requirement:** Benchmark latency must stay under 50 ms at 10k requests per second (RPS).\n\n## Decisions\n- Deploy the new caching layer by next Tuesday.\n- Jordan owns the Redis cluster and sentinel node configuration.\n- Maya owns the API gateway route updates.\n- The benchmark latency target is under 50 ms at 10k RPS.\n\n## Important Dates\n- **Friday:** Deadline for Jordan to configure the Redis cluster and sentinel nodes. The transcript does not give a calendar date.\n- **Next Tuesday:** Deadline to deploy the new caching layer. The transcript does not give a calendar date, so the exact day is uncertain.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "3cd283e2-44bf-483e-b74d-f1ddab730db4",
+        "760dfe20-902c-4cb7-be77-2f51c0f385d3",
+        "009f88c2-7f2b-4623-ab6d-5e7ecd878454",
+        "00efd286-80ee-484b-80f4-6e8cb5126597"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-630634a87ee4",
+      "created_at": "2026-10-12T14:24:06.932373+00:00"
+    },
+    {
+      "id": "931e61d5-dd51-4ba2-ad8c-2875dec93cf2",
+      "user_id": "default_user",
+      "conversation_id": "b46cc7bb-1f37-47cd-86a3-e76616897df9",
+      "title": "Redis Architecture & Latency Alignment",
+      "source": "voice",
+      "timestamp": "2026-10-12T14:22:14.381390+00:00",
+      "transcript": "Meeting with Jordan and Maya on Redis architecture. We agreed to deploy the new caching layer by next Tuesday. Jordan will configure the Redis cluster and sentinel nodes by Friday. Maya is responsible for updating the API gateway routes. We also confirmed the benchmark latency target must stay under 50 milliseconds under 10k RPS.",
+      "summary": "**Summary**\nJordan, Maya, and the speaker met to discuss Redis architecture. They agreed to deploy a new caching layer by next Tuesday. Jordan will configure the Redis cluster and sentinel nodes, and Maya will update the API gateway routes. The team confirmed a benchmark latency target of under 50 milliseconds at 10k RPS.\n\n**Key Points**\n- **Topic:** Redis architecture and deploying a new caching layer\n- **Participants:** Jordan, Maya, and the speaker (name not stated)\n- **Jordan's task:** Configure the Redis cluster and sentinel nodes\n- **Maya's task:** Update the API gateway routes\n- **Performance requirement:** Benchmark latency must stay under 50 ms at 10k requests per second\n- **Unspecified details:** No deadline was given for Maya's task, and no other owners or next steps were named\n\n**Decisions**\n- Deploy the new caching layer by next Tuesday\n- Assign Redis cluster and sentinel node configuration to Jordan\n- Assign the API gateway route updates to Maya\n- Set the benchmark latency target at under 50 ms at 10k RPS\n\n**Important Dates**\n- **Friday:** Jordan's deadline to configure the Redis cluster and sentinel nodes\n- **Next Tuesday:** Deadline to deploy the new caching layer\n- **Note:** The transcript gives only relative dates. Exact calendar dates can't be confirmed because the meeting date isn't stated.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "c24fa611-b2da-4289-89e6-4a2fb2b5fa10",
+        "cfe26737-c186-4b55-ae73-8abe0b662a9d",
+        "8bb6378b-3bf8-46f2-92eb-388e18481ca8",
+        "93ad4f3b-b91b-4f94-8585-546d2aa2635f"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-0e4ae4000e4b",
+      "created_at": "2026-10-12T14:22:14.381390+00:00"
+    },
+    {
+      "id": "cb1a2fbb-01bb-4709-89ea-f3ff8a0b65a5",
+      "user_id": "default_user",
+      "conversation_id": "6c135f89-468c-4403-bf04-f83d9d248801",
+      "title": "Test Sync",
+      "source": "manual",
+      "timestamp": "2026-10-12T14:20:13.515591+00:00",
+      "transcript": "Met with Sarah and Elena to discuss the latency target. Sarah will finalize the Qdrant specs by Thursday.",
+      "summary": "**Summary**\nSarah, Elena, and the speaker met to discuss the latency target. Sarah committed to finalizing the Qdrant specs by Thursday.\n\n**Key Points**\n- **Participants:** Sarah, Elena, and the speaker (unnamed).\n- **Main topic:** The latency target. The transcript does not state the target value or any details of the discussion.\n- **Action item:** Sarah will finalize the Qdrant specs.\n\n**Decisions**\n- The transcript records no explicit decisions.\n- The only confirmed commitment is that Sarah owns finalizing the Qdrant specs.\n\n**Important Dates**\n- **Thursday:** Sarah's deadline for finalizing the Qdrant specs.\n  - *Uncertain:* The transcript doesn't give a calendar date. Based on today's date, this may be Thursday, October 15, 2026, but that is not confirmed.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "847085a9-e920-465a-9add-e0508b1f949c"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-907842dce088",
+      "created_at": "2026-10-12T14:20:13.515591+00:00"
+    },
+    {
+      "id": "4b2b26d1-5c5b-4cb9-8dd6-ef547e44c3d6",
+      "user_id": "default_user",
+      "conversation_id": "9baa8568-661e-4adc-89a4-a6dd10bb0708",
+      "title": "Test Sync",
+      "source": "manual",
+      "timestamp": "2026-10-12T13:52:58.603273+00:00",
+      "transcript": "Met with Sarah and Elena to discuss the latency target. Sarah will finalize the Qdrant specs by Thursday.",
+      "summary": "# Summary\nSarah, Elena, and the speaker met to discuss the latency target. Sarah committed to finalizing the Qdrant specifications by Thursday.\n\n# Key Points\n- **Attendees:** Sarah and Elena, plus the speaker.\n- **Main topic:** The latency target.\n- **Action item:** Sarah will finalize the Qdrant specs.\n- **Not stated:** The actual latency target value, and whether the group reached any conclusions about it.\n\n# Decisions\n- **Confirmed:** Sarah owns finalizing the Qdrant specs.\n- **Not stated:** No other decisions are recorded, including whether a latency target was agreed.\n\n# Important Dates\n- **Thursday:** Deadline for Sarah to finalize the Qdrant specs. The transcript doesn't give a calendar date. If it means the current week, that would be Thursday, October 15, 2026, but this is an assumption.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "259b8b56-9c19-402e-9c3a-dad82f25eef4"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-9cac80bb5287",
+      "created_at": "2026-10-12T13:52:58.603273+00:00"
+    },
+    {
+      "id": "bdaa2f1a-9403-45d1-827e-eb1c10768a38",
+      "user_id": "default_user",
+      "conversation_id": "bc42bc29-be0f-4d6f-b245-8e1b5b870056",
+      "title": "Test Sync",
+      "source": "manual",
+      "timestamp": "2026-10-12T13:51:44.062110+00:00",
+      "transcript": "Met with Sarah and Elena to discuss the latency target. Sarah will finalize the Qdrant specs by Thursday.",
+      "summary": "**Summary**\nSarah, Elena, and the speaker met to discuss the latency target. Sarah agreed to finalize the Qdrant specifications by Thursday. The transcript does not say whether a latency target was agreed.\n\n**Key Points**\n- **Topic:** The latency target.\n- **Participants:** Sarah and Elena, plus the speaker.\n- **Action item:** Sarah is responsible for finalizing the Qdrant specs.\n- **Not stated:** The specific latency target value, and any conclusions about it.\n\n**Decisions**\n- Sarah will finalize the Qdrant specs (confirmed).\n- No other decisions are recorded, including a final latency target.\n\n**Important Dates**\n- **Thursday:** Sarah's deadline for the Qdrant specs.\n    - Based on today's date (Monday, October 12, 2026), this is likely Thursday, October 15, 2026.\n    - The exact date is not stated in the transcript.",
+      "topics": [
+        "Conversation"
+      ],
+      "facts": [],
+      "people": [],
+      "task_ids": [
+        "bd36a08f-39aa-4ad4-a7c4-10166960f7ae"
+      ],
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "correlation_id": "corr-7a3fec926a2d",
+      "created_at": "2026-10-12T13:51:44.062110+00:00"
+    },
+    {
+      "id": "mem-0c8439",
+      "user_id": "default_user",
+      "conversation_id": "conv-8b09d0",
+      "title": "Omi Automated Webhook Test",
+      "source": "omi",
+      "timestamp": "2026-10-12T13:22:20.440117",
+      "transcript": "Omi device test: checking webhook delivery and vector generation in MindFlow AI.",
+      "summary": "Discussion regarding Omi device test: checking webhook delivery and vector generation in MindFlow AI. Coordinated strategic goals, deadlines, and operational next steps.",
+      "topics": [
+        "Voice Sync",
+        "Operations",
+        "Actionable Next Steps"
+      ],
+      "facts": [
+        "Transcript contains 12 spoken words across 1 key statements",
+        "Captured through MindFlow speech processing pipeline",
+        "Indexed into Qdrant Cloud semantic vector collection"
+      ],
+      "task_ids": [
+        "task-a6b8d9"
+      ],
+      "created_at": "2026-10-12T13:22:20.440117"
+    },
+    {
+      "id": "mem-59eb52",
+      "user_id": "default_user",
+      "conversation_id": "conv-35a98e",
+      "title": "Automated Test Voice Note",
+      "source": "manual",
+      "timestamp": "2026-10-12T13:22:20.263974",
+      "transcript": "Test note: Elena scheduled the API testing for Friday morning. Alex must verify the Qdrant Cloud connection.",
+      "summary": "Discussion regarding Test note: Elena scheduled the API testing for Friday morning. Coordinated strategic goals, deadlines, and operational next steps.",
+      "topics": [
+        "Voice Sync",
+        "Operations",
+        "Actionable Next Steps"
+      ],
+      "facts": [
+        "Transcript contains 17 spoken words across 2 key statements",
+        "Captured through MindFlow speech processing pipeline",
+        "Indexed into Qdrant Cloud semantic vector collection"
+      ],
+      "task_ids": [
+        "task-b136e5"
+      ],
+      "created_at": "2026-10-12T13:22:20.263974"
+    },
+    {
+      "id": "mem-101",
+      "user_id": "default_user",
+      "conversation_id": "conv-892",
+      "title": "Product Strategy Sync with Sarah",
+      "source": "omi",
+      "timestamp": "2026-10-12T14:30:00Z",
+      "transcript": "Sarah and I reviewed the Q4 roadmap. We agreed that MindFlow's voice query latency must be under 800ms. Sarah will finalize the Qdrant Cloud indexing specs by Thursday, and I need to email David regarding the Lyzr production rate limits. We also discussed migrating from OpenAI to FastEmbed for default offline vectors.",
+      "summary": "Q4 roadmap alignment on MindFlow voice query latency target (<800ms). Allocated tasks for Qdrant Cloud indexing specs and Lyzr rate limit review.",
+      "topics": [
+        "Product Roadmap",
+        "Latency Optimization",
+        "Lyzr API",
+        "Qdrant Cloud"
+      ],
+      "facts": [
+        "Latency goal set to under 800ms for voice queries",
+        "Sarah finalizing Qdrant indexing specs by Thursday",
+        "Decision made to support FastEmbed offline embeddings"
+      ],
+      "task_ids": [
+        "task-201",
+        "task-202"
+      ],
+      "created_at": "2026-10-12T14:32:15Z"
+    },
+    {
+      "id": "mem-102",
+      "user_id": "default_user",
+      "conversation_id": "conv-893",
+      "title": "Coffee Catchup: Omi Hardware Wearable Notes",
+      "source": "voice",
+      "timestamp": "2026-10-11T16:15:00Z",
+      "transcript": "Testing Omi necklace microphone outdoors in windy conditions. Noise reduction performs surprisingly well, but whisper mode requires gain adjustment. Action item: add an audio threshold filter in the FastAPI webhook parser so incomplete short clips are flagged.",
+      "summary": "Field test analysis of Omi necklace microphone. Evaluated ambient noise cancellation and decided to implement webhook audio threshold validation in FastAPI.",
+      "topics": [
+        "Omi Wearable",
+        "Hardware Testing",
+        "Audio Processing"
+      ],
+      "facts": [
+        "Outdoor noise cancellation tested positive",
+        "FastAPI webhook requires audio duration/threshold validation"
+      ],
+      "task_ids": [
+        "task-203"
+      ],
+      "created_at": "2026-10-11T16:17:40Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "19b6baa7-5b13-4f95-8ebe-7adea091796b",
+      "user_id": "default_user",
+      "memory_id": "fee80a91-c8d6-4401-85b6-fab540b3c759",
+      "conversation_id": "8746d361-09a9-425f-bc8a-1be0d91d0a7e",
+      "title": "Finalize the Qdrant specs",
+      "description": null,
+      "deadline": "Thursday (2026-10-15)",
+      "status": "completed",
+      "priority": "medium",
+      "assigned_owner": "Sarah",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Finalize the Qdrant specs",
+        "owner": "Sarah",
+        "deadline": "Thursday (2026-10-15)",
+        "priority": "medium"
+      },
+      "created_at": "2026-10-13T07:33:43.048790+00:00",
+      "updated_at": "2026-10-13T07:34:14.236096+00:00"
+    },
+    {
+      "id": "bc40542c-bf09-43c5-90c1-759716a0c70b",
+      "user_id": "default_user",
+      "memory_id": "405d79ee-04a2-4966-a5c4-7ad050a09d9b",
+      "conversation_id": "fb6030ec-e648-46c5-9812-0758f28d361a",
+      "title": "Implement JWT token rotation with a 15-minute expiration",
+      "description": null,
+      "deadline": "next Wednesday",
+      "status": "in_progress",
+      "priority": "medium",
+      "assigned_owner": "Daniel",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Implement JWT token rotation with a 15-minute expiration",
+        "owner": "Daniel",
+        "deadline": "next Wednesday",
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:29:17.589655+00:00",
+      "updated_at": "2026-10-12T14:30:50.260457+00:00"
+    },
+    {
+      "id": "af48a093-360d-4b3f-a74b-ce352d5dc952",
+      "user_id": "default_user",
+      "memory_id": "405d79ee-04a2-4966-a5c4-7ad050a09d9b",
+      "conversation_id": "fb6030ec-e648-46c5-9812-0758f28d361a",
+      "title": "Audit the CORS origin whitelists",
+      "description": null,
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Sarah",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Audit the CORS origin whitelists",
+        "owner": "Sarah",
+        "deadline": null,
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:29:17.589655+00:00",
+      "updated_at": "2026-10-12T14:29:17.589655+00:00"
+    },
+    {
+      "id": "7fbcb505-bfcc-4066-8aa5-79be9a55c719",
+      "user_id": "default_user",
+      "memory_id": "405d79ee-04a2-4966-a5c4-7ad050a09d9b",
+      "conversation_id": "fb6030ec-e648-46c5-9812-0758f28d361a",
+      "title": "Enforce rate limiting on the /auth/login endpoint",
+      "description": null,
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": null,
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Enforce rate limiting on the /auth/login endpoint",
+        "owner": null,
+        "deadline": null,
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:29:17.589655+00:00",
+      "updated_at": "2026-10-12T14:29:17.589655+00:00"
+    },
+    {
+      "id": "f026a15c-b641-4797-93b7-08038c057aca",
+      "user_id": "default_user",
+      "memory_id": "c3cdd725-4cd6-45d0-aa01-4985f16fbaaa",
+      "conversation_id": "2565a8c2-0f69-4a0d-8800-f6040293d73e",
+      "title": "Verify API token renewal with the security team",
+      "description": null,
+      "deadline": "Monday",
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": null,
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Verify API token renewal with the security team",
+        "owner": null,
+        "deadline": "Monday",
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:24:30.477225+00:00",
+      "updated_at": "2026-10-12T14:24:30.477225+00:00"
+    },
+    {
+      "id": "3cd283e2-44bf-483e-b74d-f1ddab730db4",
+      "user_id": "default_user",
+      "memory_id": "7d586ab6-db3f-457c-a37e-7288081cc8c0",
+      "conversation_id": "b14c88fa-d64a-4b9b-b989-38f3c3441c1c",
+      "title": "Deploy the new caching layer",
+      "description": null,
+      "deadline": "next Tuesday",
+      "status": "completed",
+      "priority": "high",
+      "assigned_owner": null,
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Deploy the new caching layer",
+        "owner": null,
+        "deadline": "next Tuesday",
+        "priority": "high"
+      },
+      "created_at": "2026-10-12T14:24:05.306563+00:00",
+      "updated_at": "2026-10-12T14:24:07.105682+00:00"
+    },
+    {
+      "id": "760dfe20-902c-4cb7-be77-2f51c0f385d3",
+      "user_id": "default_user",
+      "memory_id": "7d586ab6-db3f-457c-a37e-7288081cc8c0",
+      "conversation_id": "b14c88fa-d64a-4b9b-b989-38f3c3441c1c",
+      "title": "Configure the Redis cluster and sentinel nodes",
+      "description": null,
+      "deadline": "Friday",
+      "status": "pending",
+      "priority": "high",
+      "assigned_owner": "Jordan",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Configure the Redis cluster and sentinel nodes",
+        "owner": "Jordan",
+        "deadline": "Friday",
+        "priority": "high"
+      },
+      "created_at": "2026-10-12T14:24:05.306563+00:00",
+      "updated_at": "2026-10-12T14:24:05.306563+00:00"
+    },
+    {
+      "id": "009f88c2-7f2b-4623-ab6d-5e7ecd878454",
+      "user_id": "default_user",
+      "memory_id": "7d586ab6-db3f-457c-a37e-7288081cc8c0",
+      "conversation_id": "b14c88fa-d64a-4b9b-b989-38f3c3441c1c",
+      "title": "Update the API gateway routes",
+      "description": null,
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Maya",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Update the API gateway routes",
+        "owner": "Maya",
+        "deadline": null,
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:24:05.306563+00:00",
+      "updated_at": "2026-10-12T14:24:05.306563+00:00"
+    },
+    {
+      "id": "00efd286-80ee-484b-80f4-6e8cb5126597",
+      "user_id": "default_user",
+      "memory_id": "7d586ab6-db3f-457c-a37e-7288081cc8c0",
+      "conversation_id": "b14c88fa-d64a-4b9b-b989-38f3c3441c1c",
+      "title": "Keep benchmark latency under 50 milliseconds at 10k RPS",
+      "description": null,
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": null,
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Keep benchmark latency under 50 milliseconds at 10k RPS",
+        "owner": null,
+        "deadline": null,
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:24:05.306563+00:00",
+      "updated_at": "2026-10-12T14:24:05.307563+00:00"
+    },
+    {
+      "id": "c24fa611-b2da-4289-89e6-4a2fb2b5fa10",
+      "user_id": "default_user",
+      "memory_id": "931e61d5-dd51-4ba2-ad8c-2875dec93cf2",
+      "conversation_id": "b46cc7bb-1f37-47cd-86a3-e76616897df9",
+      "title": "Deploy the new caching layer",
+      "description": null,
+      "deadline": "next Tuesday",
+      "status": "completed",
+      "priority": "high",
+      "assigned_owner": null,
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Deploy the new caching layer",
+        "owner": null,
+        "deadline": "next Tuesday",
+        "priority": "high"
+      },
+      "created_at": "2026-10-12T14:22:12.941526+00:00",
+      "updated_at": "2026-10-12T14:22:14.493264+00:00"
+    },
+    {
+      "id": "cfe26737-c186-4b55-ae73-8abe0b662a9d",
+      "user_id": "default_user",
+      "memory_id": "931e61d5-dd51-4ba2-ad8c-2875dec93cf2",
+      "conversation_id": "b46cc7bb-1f37-47cd-86a3-e76616897df9",
+      "title": "Configure the Redis cluster and sentinel nodes",
+      "description": null,
+      "deadline": "Friday",
+      "status": "pending",
+      "priority": "high",
+      "assigned_owner": "Jordan",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Configure the Redis cluster and sentinel nodes",
+        "owner": "Jordan",
+        "deadline": "Friday",
+        "priority": "high"
+      },
+      "created_at": "2026-10-12T14:22:12.942076+00:00",
+      "updated_at": "2026-10-12T14:22:12.942076+00:00"
+    },
+    {
+      "id": "8bb6378b-3bf8-46f2-92eb-388e18481ca8",
+      "user_id": "default_user",
+      "memory_id": "931e61d5-dd51-4ba2-ad8c-2875dec93cf2",
+      "conversation_id": "b46cc7bb-1f37-47cd-86a3-e76616897df9",
+      "title": "Update the API gateway routes",
+      "description": null,
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Maya",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Update the API gateway routes",
+        "owner": "Maya",
+        "deadline": null,
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:22:12.942076+00:00",
+      "updated_at": "2026-10-12T14:22:12.942076+00:00"
+    },
+    {
+      "id": "93ad4f3b-b91b-4f94-8585-546d2aa2635f",
+      "user_id": "default_user",
+      "memory_id": "931e61d5-dd51-4ba2-ad8c-2875dec93cf2",
+      "conversation_id": "b46cc7bb-1f37-47cd-86a3-e76616897df9",
+      "title": "Keep benchmark latency under 50 milliseconds at 10k RPS",
+      "description": null,
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": null,
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Keep benchmark latency under 50 milliseconds at 10k RPS",
+        "owner": null,
+        "deadline": null,
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:22:12.942076+00:00",
+      "updated_at": "2026-10-12T14:22:12.942076+00:00"
+    },
+    {
+      "id": "847085a9-e920-465a-9add-e0508b1f949c",
+      "user_id": "default_user",
+      "memory_id": "cb1a2fbb-01bb-4709-89ea-f3ff8a0b65a5",
+      "conversation_id": "6c135f89-468c-4403-bf04-f83d9d248801",
+      "title": "Finalize the Qdrant specs",
+      "description": null,
+      "deadline": "Thursday",
+      "status": "completed",
+      "priority": "medium",
+      "assigned_owner": "Sarah",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Finalize the Qdrant specs",
+        "owner": "Sarah",
+        "deadline": "Thursday",
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T14:20:07.605507+00:00",
+      "updated_at": "2026-10-12T14:20:14.371106+00:00"
+    },
+    {
+      "id": "259b8b56-9c19-402e-9c3a-dad82f25eef4",
+      "user_id": "default_user",
+      "memory_id": "4b2b26d1-5c5b-4cb9-8dd6-ef547e44c3d6",
+      "conversation_id": "9baa8568-661e-4adc-89a4-a6dd10bb0708",
+      "title": "Finalize the Qdrant specs",
+      "description": null,
+      "deadline": "Thursday",
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Sarah",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Finalize the Qdrant specs",
+        "owner": "Sarah",
+        "deadline": "Thursday",
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T13:52:52.420031+00:00",
+      "updated_at": "2026-10-12T14:09:44.292487+00:00"
+    },
+    {
+      "id": "bd36a08f-39aa-4ad4-a7c4-10166960f7ae",
+      "user_id": "default_user",
+      "memory_id": "bdaa2f1a-9403-45d1-827e-eb1c10768a38",
+      "conversation_id": "bc42bc29-be0f-4d6f-b245-8e1b5b870056",
+      "title": "Finalize the Qdrant specs",
+      "description": null,
+      "deadline": "Thursday",
+      "status": "completed",
+      "priority": "medium",
+      "assigned_owner": "Sarah",
+      "is_user_edited": false,
+      "edited_fields": [],
+      "extracted": {
+        "title": "Finalize the Qdrant specs",
+        "owner": "Sarah",
+        "deadline": "Thursday",
+        "priority": "medium"
+      },
+      "created_at": "2026-10-12T13:51:37.380531+00:00",
+      "updated_at": "2026-10-12T13:51:50.499878+00:00"
+    },
+    {
+      "id": "task-a6b8d9",
+      "memory_id": "mem-0c8439",
+      "conversation_id": "conv-8b09d0",
+      "title": "Follow up on Omi Automated Webhook Test",
+      "description": "Review decisions from speech transcript: Omi device test: checking webhook delivery and vector generation in MindFlow AI....",
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Alex (Self)",
+      "is_user_edited": false,
+      "created_at": "2026-10-12T13:22:20.440117",
+      "updated_at": "2026-10-12T13:22:20.440117"
+    },
+    {
+      "id": "task-b136e5",
+      "memory_id": "mem-59eb52",
+      "conversation_id": "conv-35a98e",
+      "title": "Follow up on Automated Test Voice Note",
+      "description": "Review decisions from speech transcript: Test note: Elena scheduled the API testing for Friday morning. Alex must verify the Qdrant Cloud connection....",
+      "deadline": null,
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Alex (Self)",
+      "is_user_edited": false,
+      "created_at": "2026-10-12T13:22:20.263974",
+      "updated_at": "2026-10-12T13:22:20.263974"
+    },
+    {
+      "id": "task-201",
+      "memory_id": "mem-101",
+      "conversation_id": "conv-892",
+      "title": "Finalize Qdrant Cloud vector indexing specs",
+      "description": "Ensure 384-dim BAAI/bge-small and 1536-dim OpenAI payloads are mapped correctly in the schema.",
+      "deadline": "2026-10-15",
+      "status": "completed",
+      "priority": "high",
+      "assigned_owner": "Sarah Chen",
+      "is_user_edited": true,
+      "created_at": "2026-10-12T14:32:15Z",
+      "updated_at": "2026-10-12T14:32:15Z"
+    },
+    {
+      "id": "task-202",
+      "memory_id": "mem-101",
+      "conversation_id": "conv-892",
+      "title": "Email David regarding Lyzr production tier rate limits",
+      "description": "Verify tier quotas for 4 parallel agent invocations during high-concurrency voice streams.",
+      "deadline": "2026-10-14",
+      "status": "pending",
+      "priority": "medium",
+      "assigned_owner": "Alex (Self)",
+      "is_user_edited": false,
+      "created_at": "2026-10-12T14:32:15Z",
+      "updated_at": "2026-10-12T14:32:15Z"
+    },
+    {
+      "id": "task-203",
+      "memory_id": "mem-102",
+      "conversation_id": "conv-893",
+      "title": "Add audio threshold filter in FastAPI Omi webhook parser",
+      "description": "Ignore micro-segments under 1.5 seconds to prevent spamming the vector index.",
+      "deadline": "2026-10-16",
+      "status": "completed",
+      "priority": "low",
+      "assigned_owner": "Alex (Self)",
+      "is_user_edited": true,
+      "created_at": "2026-10-11T16:17:40Z",
+      "updated_at": "2026-10-12T10:00:00Z"
+    }
+  ],
+  "executions": [
+    {
+      "execution_id": "exec-omi-250c8645",
+      "correlation_id": "corr-omi-f9517406",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "running",
+      "label": "Omi Voice Note (test-con)",
+      "created_at": "2026-10-13T07:34:38.931770+00:00",
+      "start_time": "2026-10-13T07:34:38.931770+00:00",
+      "end_time": null,
+      "total_duration_ms": null,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-13T07:34:38.931770+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: OMI (49 chars)",
+          "output_preview": "Validated transcript: 8 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-13T07:34:38.931770+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "running",
+          "started_at": "2026-10-13T07:34:38.963540+00:00",
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": "Routing analysis for transcript (8 words)",
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {}
+    },
+    {
+      "execution_id": "exec-3ebe3a1df184",
+      "correlation_id": "corr-62d04215e27e",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What did Sarah agree to?...",
+      "created_at": "2026-10-13T07:34:08.661945+00:00",
+      "start_time": "2026-10-13T07:34:08.661945+00:00",
+      "end_time": "2026-10-13T07:34:14.184660+00:00",
+      "total_duration_ms": 5534,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-13T07:34:08.661945+00:00",
+          "duration_ms": 5,
+          "input_preview": "What did Sarah agree to?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-13T07:34:08.667874+00:00",
+          "finished_at": "2026-10-13T07:34:09.081381+00:00",
+          "duration_ms": 381,
+          "input_preview": "Query embedding & search: 'What did Sarah agree to?'",
+          "output_preview": "Retrieved 9 relevant memories (Top score: 62%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-13T07:34:09.096203+00:00",
+          "finished_at": "2026-10-13T07:34:14.172504+00:00",
+          "duration_ms": 5060,
+          "input_preview": "Providing 9 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (46 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-13T07:34:14.184660+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 9 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "Sarah agreed to **finalize the Qdrant specs by Thursday**.\n\nThis comes from the **\"Test Sync\"** meeting with Sarah, Elena, and you, where the main topic was the latency target. All four retrieved memories agree on this, and the most recent one is from **October 13, 2026**.",
+        "citations_count": 9
+      }
+    },
+    {
+      "execution_id": "exec-89a770041fc6",
+      "correlation_id": "corr-6133811a1262",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Test Sync",
+      "created_at": "2026-10-13T07:33:21.940344+00:00",
+      "start_time": "2026-10-13T07:33:21.940344+00:00",
+      "end_time": "2026-10-13T07:34:08.602818+00:00",
+      "total_duration_ms": 46648,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-13T07:33:21.940344+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: MANUAL (105 chars)",
+          "output_preview": "Validated transcript: 18 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-13T07:33:21.940344+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-13T07:33:21.944278+00:00",
+          "finished_at": "2026-10-13T07:33:26.961354+00:00",
+          "duration_ms": 4995,
+          "input_preview": "Routing analysis for transcript (18 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript is a meeting discussion that should be summarized, and it includes an action item: Sarah will finalize the Qdrant specs by Thursday.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-13T07:33:26.975578+00:00",
+          "finished_at": "2026-10-13T07:33:43.029795+00:00",
+          "duration_ms": 7871,
+          "input_preview": "Generating executive summary for dialogue (18 words)",
+          "output_preview": "Summary: **Summary**\nA meeting was held with Sarah and Elena to discuss the latency target. Sarah committed to finalizing the Qdrant specs by Thursda... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-13T07:33:26.985302+00:00",
+          "finished_at": "2026-10-13T07:33:43.048790+00:00",
+          "duration_ms": 8163,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 1 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-13T07:33:43.060709+00:00",
+          "finished_at": "2026-10-13T07:34:08.537200+00:00",
+          "duration_ms": 25463,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point fee80a91 into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-13T07:34:08.558746+00:00",
+          "finished_at": "2026-10-13T07:34:08.585908+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Test Sync', 1 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "fee80a91-c8d6-4401-85b6-fab540b3c759",
+        "conversation_id": "8746d361-09a9-425f-bc8a-1be0d91d0a7e",
+        "title": "Test Sync",
+        "summary": "**Summary**\nA meeting was held with Sarah and Elena to discuss the latency target. Sarah committed to finalizing the Qdrant specs by Thursday.\n\n**Key Points**\n- **Participants:** Sarah and Elena, plus the speaker.\n- **Topic:** The latency target.\n- **Action item:** Sarah will finalize the Qdrant specs.\n- **Not stated:** The latency target value and any outcome of the discussion.\n\n**Decisions**\n- No explicit decisions were recorded.\n- The only confirmed outcome is Sarah's commitment to finalize the Qdrant specs.\n\n**Important Dates**\n- **Thursday:** Deadline for Sarah to finalize the Qdrant specs. No calendar date was given. If this means the coming Thursday, it would be October 15, 2026, but this is inferred, not confirmed.",
+        "tasks_count": 1
+      }
+    },
+    {
+      "execution_id": "exec-74704a8f9d0e",
+      "correlation_id": "corr-84549353e76d",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What did Daniel agree to regarding JWT token ...",
+      "created_at": "2026-10-12T14:31:33.274474+00:00",
+      "start_time": "2026-10-12T14:31:33.274474+00:00",
+      "end_time": "2026-10-12T14:31:40.592597+00:00",
+      "total_duration_ms": 7318,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:31:33.274474+00:00",
+          "duration_ms": 5,
+          "input_preview": "What did Daniel agree to regarding JWT token rotation?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:31:33.296032+00:00",
+          "finished_at": "2026-10-12T14:31:34.514679+00:00",
+          "duration_ms": 1180,
+          "input_preview": "Query embedding & search: 'What did Daniel agree to regarding JWT token rotation?'",
+          "output_preview": "Retrieved 7 relevant memories (Top score: 80%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:31:34.537164+00:00",
+          "finished_at": "2026-10-12T14:31:40.541477+00:00",
+          "duration_ms": 5970,
+          "input_preview": "Providing 7 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (56 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:31:40.559003+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 7 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "According to the **Security Architecture Review** (recorded October 12, 2026), Daniel agreed to **implement JWT token rotation with a 15-minute expiration by next Wednesday**.\n\n**Related:** Your voice note from the same day, **Omi Voice Note (a60713d7)**, says you need to *verify API token renewal with the security team on Monday*. That may connect to Daniel's task.",
+        "citations_count": 7
+      }
+    },
+    {
+      "execution_id": "exec-16c3c74a42c2",
+      "correlation_id": "corr-1bc8c7e80281",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Security Architecture Review",
+      "created_at": "2026-10-12T14:28:52.777560+00:00",
+      "start_time": "2026-10-12T14:28:52.777560+00:00",
+      "end_time": "2026-10-12T14:29:19.353093+00:00",
+      "total_duration_ms": 26538,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:28:52.777560+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: MANUAL (262 chars)",
+          "output_preview": "Validated transcript: 41 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:28:52.777560+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:28:52.815282+00:00",
+          "finished_at": "2026-10-12T14:28:57.591712+00:00",
+          "duration_ms": 4684,
+          "input_preview": "Routing analysis for transcript (41 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript is a meeting about JWT auth policy that needs a summary. It also has tasks with owners and a deadline: Daniel will add token rotation with 15-min expiry by next Wednesday, Sarah will audit the CORS whitelists, and the team will enforce rate limiting on /auth/login.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:28:57.610815+00:00",
+          "finished_at": "2026-10-12T14:29:17.570181+00:00",
+          "duration_ms": 9033,
+          "input_preview": "Generating executive summary for dialogue (41 words)",
+          "output_preview": "Summary: **Summary**\nThe team met with Daniel to review the JWT authentication policy. Daniel will implement token rotation with a 15-minute expirati... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:28:57.645985+00:00",
+          "finished_at": "2026-10-12T14:29:17.589655+00:00",
+          "duration_ms": 10850,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 3 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:29:17.625448+00:00",
+          "finished_at": "2026-10-12T14:29:19.146871+00:00",
+          "duration_ms": 1486,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point 405d79ee into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:29:19.172358+00:00",
+          "finished_at": "2026-10-12T14:29:19.310460+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Security Architecture Review', 3 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "405d79ee-04a2-4966-a5c4-7ad050a09d9b",
+        "conversation_id": "fb6030ec-e648-46c5-9812-0758f28d361a",
+        "title": "Security Architecture Review",
+        "summary": "**Summary**\nThe team met with Daniel to review the JWT authentication policy. Daniel will implement token rotation with a 15-minute expiration by next Wednesday, and Sarah will audit the CORS origin whitelists. The team also agreed to enforce rate limiting on the `/auth/login` endpoint.\n\n**Key Points**\n- **Main topic:** Review of the JWT authentication policy\n- **Participants:** Daniel and Sarah\n- **Daniel:** Will implement JWT token rotation with a 15-minute token expiration.\n- **Sarah:** Will audit the CORS origin whitelists.\n- **Rate limiting:** Will be enforced on the `/auth/login` endpoint.\n- **Not stated in the transcript:**\n  - Who will implement the rate limiting\n  - The deadline for Sarah's CORS audit\n\n**Decisions**\n1. Implement token rotation with a 15-minute expiration (owner: Daniel).\n2. Audit the CORS origin whitelists (owner: Sarah).\n3. Enforce rate limiting on the `/auth/login` endpoint (owner not specified).\n\n**Important Dates**\n- **Next Wednesday:** Deadline for Daniel's token rotation work. No exact calendar date was given, and the meeting date is not stated, so the specific date cannot be confirmed.\n- **Sarah's CORS audit:** No deadline mentioned.\n- **Rate limiting:** No deadline mentioned.",
+        "tasks_count": 3
+      }
+    },
+    {
+      "execution_id": "exec-omi-a676b536",
+      "correlation_id": "corr-omi-a99e84ff",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Omi Voice Note (a60713d7)",
+      "created_at": "2026-10-12T14:24:15.508410+00:00",
+      "start_time": "2026-10-12T14:24:15.508410+00:00",
+      "end_time": "2026-10-12T14:24:31.752496+00:00",
+      "total_duration_ms": 16222,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:24:15.508410+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: OMI (78 chars)",
+          "output_preview": "Validated transcript: 14 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:24:15.508410+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:15.530462+00:00",
+          "finished_at": "2026-10-12T14:24:23.373601+00:00",
+          "duration_ms": 7813,
+          "input_preview": "Routing analysis for transcript (14 words)",
+          "output_preview": "Decision: Summarizer=False, Tasks=True. Reason: The transcript is a single short note, so a summary adds nothing. It contains one task: verify the API token renewal with the security team on Monday.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "skipped",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:24:23.383510+00:00",
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": "Skipped by Manager Agent decision",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:23.405603+00:00",
+          "finished_at": "2026-10-12T14:24:30.477225+00:00",
+          "duration_ms": 7051,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 1 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:30.485237+00:00",
+          "finished_at": "2026-10-12T14:24:31.659656+00:00",
+          "duration_ms": 1154,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point c3cdd725 into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:31.671324+00:00",
+          "finished_at": "2026-10-12T14:24:31.735374+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Omi Voice Note (a60713d7)', 1 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "c3cdd725-4cd6-45d0-aa01-4985f16fbaaa",
+        "conversation_id": "2565a8c2-0f69-4a0d-8800-f6040293d73e",
+        "title": "Omi Voice Note (a60713d7)",
+        "summary": "",
+        "tasks_count": 1
+      }
+    },
+    {
+      "execution_id": "exec-edff9dfee98e",
+      "correlation_id": "corr-6000337a5de9",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: Who is responsible for the Redis cluster and ...",
+      "created_at": "2026-10-12T14:24:07.124527+00:00",
+      "start_time": "2026-10-12T14:24:07.124527+00:00",
+      "end_time": "2026-10-12T14:24:15.408828+00:00",
+      "total_duration_ms": 8284,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:24:07.124527+00:00",
+          "duration_ms": 5,
+          "input_preview": "Who is responsible for the Redis cluster and what is the latency target?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:07.149911+00:00",
+          "finished_at": "2026-10-12T14:24:07.529116+00:00",
+          "duration_ms": 354,
+          "input_preview": "Query embedding & search: 'Who is responsible for the Redis cluster and what is the latency target?'",
+          "output_preview": "Retrieved 5 relevant memories (Top score: 82%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:07.558217+00:00",
+          "finished_at": "2026-10-12T14:24:15.370070+00:00",
+          "duration_ms": 7786,
+          "input_preview": "Providing 5 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (94 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:24:15.380473+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 5 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "**Redis cluster owner:** **Jordan** is responsible for configuring the Redis cluster and the sentinel nodes. Maya is handling the API gateway route updates. *(Source: \"Redis Architecture & Latency Alignment,\" October 12, 2026)*\n\n**Latency target:** Benchmark latency must stay **under 50 milliseconds at 10k RPS** (requests per second). *(Source: \"Redis Architecture & Latency Alignment,\" October 12, 2026)*\n\nThe team also agreed to deploy the new caching layer by **next Tuesday**.\n\nNote: The \"Test Sync\" meeting with Sarah and Elena also discussed a latency target, but that memory does not say whether a target was agreed.",
+        "citations_count": 5
+      }
+    },
+    {
+      "execution_id": "exec-fa25e16ec4cc",
+      "correlation_id": "corr-630634a87ee4",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Redis Architecture & Latency Alignment",
+      "created_at": "2026-10-12T14:23:42.475554+00:00",
+      "start_time": "2026-10-12T14:23:42.475554+00:00",
+      "end_time": "2026-10-12T14:24:07.026406+00:00",
+      "total_duration_ms": 24544,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:23:42.475554+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: VOICE (331 chars)",
+          "output_preview": "Validated transcript: 54 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:23:42.475554+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:23:42.482586+00:00",
+          "finished_at": "2026-10-12T14:23:46.944854+00:00",
+          "duration_ms": 4447,
+          "input_preview": "Routing analysis for transcript (54 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript has meeting content to summarize: a Redis caching-layer architecture discussion and a latency target under 50 ms at 10k RPS. It also has tasks with owners and deadlines: deploy the caching layer by next Tuesday, Jordan to configure the Redis cluster and sentinel nodes by Friday, and Maya to update the API gateway routes.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:23:46.953693+00:00",
+          "finished_at": "2026-10-12T14:24:05.290646+00:00",
+          "duration_ms": 10002,
+          "input_preview": "Generating executive summary for dialogue (54 words)",
+          "output_preview": "Summary: ## Summary\nJordan, Maya, and the speaker met to discuss Redis architecture. They agreed to deploy a new caching layer by next Tuesday and as... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:23:46.968984+00:00",
+          "finished_at": "2026-10-12T14:24:05.307563+00:00",
+          "duration_ms": 8302,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 4 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:05.333088+00:00",
+          "finished_at": "2026-10-12T14:24:06.883627+00:00",
+          "duration_ms": 1521,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point 7d586ab6 into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:24:06.897857+00:00",
+          "finished_at": "2026-10-12T14:24:06.995830+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Redis Architecture & Latency Alignment', 4 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "7d586ab6-db3f-457c-a37e-7288081cc8c0",
+        "conversation_id": "b14c88fa-d64a-4b9b-b989-38f3c3441c1c",
+        "title": "Redis Architecture & Latency Alignment",
+        "summary": "## Summary\nJordan, Maya, and the speaker met to discuss Redis architecture. They agreed to deploy a new caching layer by next Tuesday and assigned tasks to Jordan and Maya. They also confirmed a performance target: benchmark latency must stay under 50 milliseconds at 10k RPS.\n\n## Key Points\n- **Topic:** Redis architecture and deployment of a new caching layer\n- **Participants:** Jordan, Maya, and the speaker\n- **Jordan:** Will configure the Redis cluster and sentinel nodes.\n- **Maya:** Is responsible for updating the API gateway routes.\n- **Performance requirement:** Benchmark latency must stay under 50 ms at 10k requests per second (RPS).\n\n## Decisions\n- Deploy the new caching layer by next Tuesday.\n- Jordan owns the Redis cluster and sentinel node configuration.\n- Maya owns the API gateway route updates.\n- The benchmark latency target is under 50 ms at 10k RPS.\n\n## Important Dates\n- **Friday:** Deadline for Jordan to configure the Redis cluster and sentinel nodes. The transcript does not give a calendar date.\n- **Next Tuesday:** Deadline to deploy the new caching layer. The transcript does not give a calendar date, so the exact day is uncertain.",
+        "tasks_count": 4
+      }
+    },
+    {
+      "execution_id": "exec-9508fc8c5d10",
+      "correlation_id": "corr-f4e1caf88b51",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: Who is responsible for the Redis cluster and ...",
+      "created_at": "2026-10-12T14:22:14.523062+00:00",
+      "start_time": "2026-10-12T14:22:14.523062+00:00",
+      "end_time": "2026-10-12T14:22:21.222412+00:00",
+      "total_duration_ms": 6699,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:22:14.523062+00:00",
+          "duration_ms": 5,
+          "input_preview": "Who is responsible for the Redis cluster and what is the latency target?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:22:14.538031+00:00",
+          "finished_at": "2026-10-12T14:22:14.910567+00:00",
+          "duration_ms": 356,
+          "input_preview": "Query embedding & search: 'Who is responsible for the Redis cluster and what is the latency target?'",
+          "output_preview": "Retrieved 4 relevant memories (Top score: 82%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:22:14.925473+00:00",
+          "finished_at": "2026-10-12T14:22:21.198894+00:00",
+          "duration_ms": 6254,
+          "input_preview": "Providing 4 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (148 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:22:21.205841+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 4 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "**Redis cluster:** **Jordan** is responsible for configuring the Redis cluster and the sentinel nodes. *(Source: \"Redis Architecture & Latency Alignment,\" October 12, 2026)*\n\nThat meeting also covered:\n- Maya will update the API gateway routes.\n- The team agreed to deploy a new caching layer by next Tuesday.\n\n**Latency target:** I couldn't find the specific value in the available memories.\n- The \"Redis Architecture & Latency Alignment\" memory says the team confirmed a benchmark latency, but the text cuts off before giving the number.\n- The \"Test Sync\" meetings (October 12, 2026) with Sarah and Elena discussed the latency target, but those memories say the transcript doesn't state an agreed value. The only action item from those meetings is that Sarah will finalize the Qdrant specifications by Thursday.\n\nTo get the exact figure, you may want to check the full \"Redis Architecture & Latency Alignment\" recording or summary.",
+        "citations_count": 4
+      }
+    },
+    {
+      "execution_id": "exec-c140643ec018",
+      "correlation_id": "corr-0e4ae4000e4b",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Redis Architecture & Latency Alignment",
+      "created_at": "2026-10-12T14:21:49.785915+00:00",
+      "start_time": "2026-10-12T14:21:49.785915+00:00",
+      "end_time": "2026-10-12T14:22:14.430470+00:00",
+      "total_duration_ms": 24637,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:21:49.785915+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: VOICE (331 chars)",
+          "output_preview": "Validated transcript: 54 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:21:49.785915+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:21:49.792993+00:00",
+          "finished_at": "2026-10-12T14:21:53.981650+00:00",
+          "duration_ms": 4164,
+          "input_preview": "Routing analysis for transcript (54 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript has decisions and a performance target worth summarizing (Redis caching layer, <50ms latency at 10k RPS). It also has tasks with owners and deadlines: deploy the caching layer by next Tuesday, Jordan sets up the Redis cluster and sentinel nodes by Friday, and Maya updates the API gateway routes.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:21:53.990309+00:00",
+          "finished_at": "2026-10-12T14:22:12.933290+00:00",
+          "duration_ms": 9568,
+          "input_preview": "Generating executive summary for dialogue (54 words)",
+          "output_preview": "Summary: **Summary**\nJordan, Maya, and the speaker met to discuss Redis architecture. They agreed to deploy a new caching layer by next Tuesday. Jord... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:21:54.011334+00:00",
+          "finished_at": "2026-10-12T14:22:12.942076+00:00",
+          "duration_ms": 9336,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 4 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:22:12.962610+00:00",
+          "finished_at": "2026-10-12T14:22:14.349180+00:00",
+          "duration_ms": 1371,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point 931e61d5 into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:22:14.361338+00:00",
+          "finished_at": "2026-10-12T14:22:14.411281+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Redis Architecture & Latency Alignment', 4 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "931e61d5-dd51-4ba2-ad8c-2875dec93cf2",
+        "conversation_id": "b46cc7bb-1f37-47cd-86a3-e76616897df9",
+        "title": "Redis Architecture & Latency Alignment",
+        "summary": "**Summary**\nJordan, Maya, and the speaker met to discuss Redis architecture. They agreed to deploy a new caching layer by next Tuesday. Jordan will configure the Redis cluster and sentinel nodes, and Maya will update the API gateway routes. The team confirmed a benchmark latency target of under 50 milliseconds at 10k RPS.\n\n**Key Points**\n- **Topic:** Redis architecture and deploying a new caching layer\n- **Participants:** Jordan, Maya, and the speaker (name not stated)\n- **Jordan's task:** Configure the Redis cluster and sentinel nodes\n- **Maya's task:** Update the API gateway routes\n- **Performance requirement:** Benchmark latency must stay under 50 ms at 10k requests per second\n- **Unspecified details:** No deadline was given for Maya's task, and no other owners or next steps were named\n\n**Decisions**\n- Deploy the new caching layer by next Tuesday\n- Assign Redis cluster and sentinel node configuration to Jordan\n- Assign the API gateway route updates to Maya\n- Set the benchmark latency target at under 50 ms at 10k RPS\n\n**Important Dates**\n- **Friday:** Jordan's deadline to configure the Redis cluster and sentinel nodes\n- **Next Tuesday:** Deadline to deploy the new caching layer\n- **Note:** The transcript gives only relative dates. Exact calendar dates can't be confirmed because the meeting date isn't stated.",
+        "tasks_count": 4
+      }
+    },
+    {
+      "execution_id": "exec-8cc779b698a6",
+      "correlation_id": "corr-351a9d5a79c3",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What did Sarah agree to?...",
+      "created_at": "2026-10-12T14:20:25.691468+00:00",
+      "start_time": "2026-10-12T14:20:25.691468+00:00",
+      "end_time": "2026-10-12T14:20:33.864326+00:00",
+      "total_duration_ms": 8173,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:20:25.691468+00:00",
+          "duration_ms": 5,
+          "input_preview": "What did Sarah agree to?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:20:25.697805+00:00",
+          "finished_at": "2026-10-12T14:20:30.391912+00:00",
+          "duration_ms": 4677,
+          "input_preview": "Query embedding & search: 'What did Sarah agree to?'",
+          "output_preview": "Retrieved 3 relevant memories (Top score: 62%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:20:30.402739+00:00",
+          "finished_at": "2026-10-12T14:20:33.840792+00:00",
+          "duration_ms": 3413,
+          "input_preview": "Providing 3 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (60 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:20:33.847360+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 3 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "Sarah agreed to **finalize the Qdrant specifications by Thursday**.\n\nThis comes from the **\"Test Sync\"** conversation recorded on October 12, 2026. All three saved versions of that meeting say the same thing. The meeting included Sarah, Elena, and the speaker, and its main topic was the latency target. The memories don't say whether a latency target was actually agreed on.",
+        "citations_count": 3
+      }
+    },
+    {
+      "execution_id": "exec-e5313461ba66",
+      "correlation_id": "corr-0bc47d471de3",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "running",
+      "label": "Query: What did Sarah agree to?...",
+      "created_at": "2026-10-12T14:20:13.596027+00:00",
+      "start_time": "2026-10-12T14:20:13.596027+00:00",
+      "end_time": null,
+      "total_duration_ms": null,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:20:13.596027+00:00",
+          "duration_ms": 5,
+          "input_preview": "What did Sarah agree to?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "running",
+          "started_at": "2026-10-12T14:20:13.601362+00:00",
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": "Query embedding & search: 'What did Sarah agree to?'",
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {}
+    },
+    {
+      "execution_id": "exec-a0a0a97f63ac",
+      "correlation_id": "corr-907842dce088",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Test Sync",
+      "created_at": "2026-10-12T14:19:33.264690+00:00",
+      "start_time": "2026-10-12T14:19:33.264690+00:00",
+      "end_time": "2026-10-12T14:20:13.555526+00:00",
+      "total_duration_ms": 40286,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:19:33.264690+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: MANUAL (105 chars)",
+          "output_preview": "Validated transcript: 18 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:19:33.264690+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:19:33.270360+00:00",
+          "finished_at": "2026-10-12T14:19:38.442021+00:00",
+          "duration_ms": 5154,
+          "input_preview": "Routing analysis for transcript (18 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript covers a meeting with Sarah and Elena about the latency target, so it needs a summary. It also has a task with an owner and deadline: Sarah will finalize the Qdrant specs by Thursday.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:19:38.447116+00:00",
+          "finished_at": "2026-10-12T14:20:07.599486+00:00",
+          "duration_ms": 20341,
+          "input_preview": "Generating executive summary for dialogue (18 words)",
+          "output_preview": "Summary: **Summary**\nSarah, Elena, and the speaker met to discuss the latency target. Sarah committed to finalizing the Qdrant specs by Thursday.\n\n**... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:19:38.462518+00:00",
+          "finished_at": "2026-10-12T14:20:07.605507+00:00",
+          "duration_ms": 8782,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 1 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:20:07.620207+00:00",
+          "finished_at": "2026-10-12T14:20:13.498582+00:00",
+          "duration_ms": 5864,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point cb1a2fbb into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:20:13.503098+00:00",
+          "finished_at": "2026-10-12T14:20:13.542453+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Test Sync', 1 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "cb1a2fbb-01bb-4709-89ea-f3ff8a0b65a5",
+        "conversation_id": "6c135f89-468c-4403-bf04-f83d9d248801",
+        "title": "Test Sync",
+        "summary": "**Summary**\nSarah, Elena, and the speaker met to discuss the latency target. Sarah committed to finalizing the Qdrant specs by Thursday.\n\n**Key Points**\n- **Participants:** Sarah, Elena, and the speaker (unnamed).\n- **Main topic:** The latency target. The transcript does not state the target value or any details of the discussion.\n- **Action item:** Sarah will finalize the Qdrant specs.\n\n**Decisions**\n- The transcript records no explicit decisions.\n- The only confirmed commitment is that Sarah owns finalizing the Qdrant specs.\n\n**Important Dates**\n- **Thursday:** Sarah's deadline for finalizing the Qdrant specs.\n  - *Uncertain:* The transcript doesn't give a calendar date. Based on today's date, this may be Thursday, October 15, 2026, but that is not confirmed.",
+        "tasks_count": 1
+      }
+    },
+    {
+      "execution_id": "exec-d6c932e80b32",
+      "correlation_id": "corr-42b389c2d8c6",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What was discussed about latency targets?...",
+      "created_at": "2026-10-12T14:12:35.166483+00:00",
+      "start_time": "2026-10-12T14:12:35.165976+00:00",
+      "end_time": "2026-10-12T14:12:41.789922+00:00",
+      "total_duration_ms": 6624,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:12:35.165976+00:00",
+          "duration_ms": 5,
+          "input_preview": "What was discussed about latency targets?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:12:35.199516+00:00",
+          "finished_at": "2026-10-12T14:12:36.469030+00:00",
+          "duration_ms": 1236,
+          "input_preview": "Query embedding & search: 'What was discussed about latency targets?'",
+          "output_preview": "Retrieved 2 relevant memories (Top score: 79%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:12:36.479147+00:00",
+          "finished_at": "2026-10-12T14:12:41.735313+00:00",
+          "duration_ms": 5225,
+          "input_preview": "Providing 2 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (93 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:12:41.747993+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 2 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "In the **Test Sync** meeting (October 12, 2026), **Sarah, Elena, and the speaker** met, and the **latency target** was the main topic.\n\nWhat the memories show:\n- **No outcome was recorded.** The memories don't say whether a latency target was agreed on, and they don't mention any specific numbers or values. (Test Sync, 13:51 recording)\n- **Related action item:** Sarah committed to **finalizing the Qdrant specifications by Thursday**. (Test Sync, both recordings)\n\nThe available memories don't include details of the latency discussion itself. If a follow-up meeting happened, it may have more details.",
+        "citations_count": 2
+      }
+    },
+    {
+      "execution_id": "exec-fd683c8dd224",
+      "correlation_id": "corr-f2ca010b700f",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What pending action items were extracted from...",
+      "created_at": "2026-10-12T14:08:03.740109+00:00",
+      "start_time": "2026-10-12T14:08:03.740109+00:00",
+      "end_time": "2026-10-12T14:08:13.563369+00:00",
+      "total_duration_ms": 9823,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:08:03.740109+00:00",
+          "duration_ms": 5,
+          "input_preview": "What pending action items were extracted from my syncs?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:08:03.751021+00:00",
+          "finished_at": "2026-10-12T14:08:04.929974+00:00",
+          "duration_ms": 1156,
+          "input_preview": "Query embedding & search: 'What pending action items were extracted from my syncs?'",
+          "output_preview": "Retrieved 2 relevant memories (Top score: 67%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:08:04.938717+00:00",
+          "finished_at": "2026-10-12T14:08:13.530607+00:00",
+          "duration_ms": 8566,
+          "input_preview": "Providing 2 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (115 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:08:13.539837+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 2 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "## Pending Action Items\n\nI found **one pending action item** from your syncs:\n\n- **Sarah will finalize the Qdrant specifications by Thursday.**\n  *Source: \"Test Sync\" (October 12, 2026)*\n\n### Notes\n- Both retrieved memories are titled **\"Test Sync\"** and were recorded about a minute apart on October 12, 2026. They describe the same meeting with Sarah, Elena, and you about the **latency target**, so they likely capture a single action item rather than two.\n- The memories **don't say whether a latency target was agreed**, so there's no recorded follow-up for that topic.\n- Part of the action item text is cut off in the memories, so there may be extra details I can't see.",
+        "citations_count": 2
+      }
+    },
+    {
+      "execution_id": "exec-116ec1ec0b4c",
+      "correlation_id": "corr-e6e8531c2949",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: hi...",
+      "created_at": "2026-10-12T14:06:42.853377+00:00",
+      "start_time": "2026-10-12T14:06:42.853377+00:00",
+      "end_time": "2026-10-12T14:06:51.648807+00:00",
+      "total_duration_ms": 8796,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:06:42.853377+00:00",
+          "duration_ms": 5,
+          "input_preview": "hi",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T14:06:42.864898+00:00",
+          "finished_at": "2026-10-12T14:06:46.210210+00:00",
+          "duration_ms": 3311,
+          "input_preview": "Query embedding & search: 'hi'",
+          "output_preview": "Retrieved 2 relevant memories (Top score: 54%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T14:06:46.217153+00:00",
+          "finished_at": "2026-10-12T14:06:51.629664+00:00",
+          "duration_ms": 5393,
+          "input_preview": "Providing 2 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (64 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T14:06:51.635712+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 2 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "Hi there! 👋 I'm your MindFlow Memory Assistant. I can help you recall details from your saved voice memories.\n\nFor example, your most recent memory is the **\"Test Sync\"** conversation from today (October 12, 2026). In it, Sarah, Elena, and you discussed the latency target, and Sarah committed to finalizing the Qdrant specifications by Thursday.\n\nWhat would you like to know about your memories?",
+        "citations_count": 2
+      }
+    },
+    {
+      "execution_id": "exec-a9cda76a3e4a",
+      "correlation_id": "corr-dada6da294fc",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What did Sarah agree to?...",
+      "created_at": "2026-10-12T13:52:58.710694+00:00",
+      "start_time": "2026-10-12T13:52:58.710694+00:00",
+      "end_time": "2026-10-12T13:53:03.087529+00:00",
+      "total_duration_ms": 4377,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:52:58.710694+00:00",
+          "duration_ms": 5,
+          "input_preview": "What did Sarah agree to?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:58.718914+00:00",
+          "finished_at": "2026-10-12T13:52:59.084420+00:00",
+          "duration_ms": 345,
+          "input_preview": "Query embedding & search: 'What did Sarah agree to?'",
+          "output_preview": "Retrieved 2 relevant memories (Top score: 60%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:59.097871+00:00",
+          "finished_at": "2026-10-12T13:53:03.072020+00:00",
+          "duration_ms": 3955,
+          "input_preview": "Providing 2 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (45 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:53:03.075754+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 2 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "Sarah agreed to **finalize the Qdrant specifications by Thursday**.\n\nThis comes from the **Test Sync** conversation on October 12, 2026, where Sarah, Elena, and the speaker met to discuss the latency target. The memories don't say whether the group agreed on a latency target itself.",
+        "citations_count": 2
+      }
+    },
+    {
+      "execution_id": "exec-ca7652e7faf6",
+      "correlation_id": "corr-9cac80bb5287",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Test Sync",
+      "created_at": "2026-10-12T13:52:30.206356+00:00",
+      "start_time": "2026-10-12T13:52:30.206356+00:00",
+      "end_time": "2026-10-12T13:52:58.659537+00:00",
+      "total_duration_ms": 28447,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:52:30.206356+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: MANUAL (105 chars)",
+          "output_preview": "Validated transcript: 18 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:52:30.206356+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:30.211948+00:00",
+          "finished_at": "2026-10-12T13:52:34.461552+00:00",
+          "duration_ms": 4229,
+          "input_preview": "Routing analysis for transcript (18 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript is a meeting discussion that should be summarized, and it contains a task with an owner and deadline: Sarah will finalize the Qdrant specs by Thursday.",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:34.467448+00:00",
+          "finished_at": "2026-10-12T13:52:52.412979+00:00",
+          "duration_ms": 9445,
+          "input_preview": "Generating executive summary for dialogue (18 words)",
+          "output_preview": "Summary: # Summary\nSarah, Elena, and the speaker met to discuss the latency target. Sarah committed to finalizing the Qdrant specifications by Thursd... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:34.483951+00:00",
+          "finished_at": "2026-10-12T13:52:52.420031+00:00",
+          "duration_ms": 8469,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 1 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:52.440315+00:00",
+          "finished_at": "2026-10-12T13:52:58.577646+00:00",
+          "duration_ms": 6115,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point 4b2b26d1 into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T13:52:58.582919+00:00",
+          "finished_at": "2026-10-12T13:52:58.641046+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Test Sync', 1 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "4b2b26d1-5c5b-4cb9-8dd6-ef547e44c3d6",
+        "conversation_id": "9baa8568-661e-4adc-89a4-a6dd10bb0708",
+        "title": "Test Sync",
+        "summary": "# Summary\nSarah, Elena, and the speaker met to discuss the latency target. Sarah committed to finalizing the Qdrant specifications by Thursday.\n\n# Key Points\n- **Attendees:** Sarah and Elena, plus the speaker.\n- **Main topic:** The latency target.\n- **Action item:** Sarah will finalize the Qdrant specs.\n- **Not stated:** The actual latency target value, and whether the group reached any conclusions about it.\n\n# Decisions\n- **Confirmed:** Sarah owns finalizing the Qdrant specs.\n- **Not stated:** No other decisions are recorded, including whether a latency target was agreed.\n\n# Important Dates\n- **Thursday:** Deadline for Sarah to finalize the Qdrant specs. The transcript doesn't give a calendar date. If it means the current week, that would be Thursday, October 15, 2026, but this is an assumption.",
+        "tasks_count": 1
+      }
+    },
+    {
+      "execution_id": "exec-omi-0ed1908e",
+      "correlation_id": "corr-omi-e964a233",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "running",
+      "label": "Omi Voice Note (omi_test)",
+      "created_at": "2026-10-12T13:51:50.574306+00:00",
+      "start_time": "2026-10-12T13:51:50.574306+00:00",
+      "end_time": null,
+      "total_duration_ms": null,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:51:50.574306+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: OMI (75 chars)",
+          "output_preview": "Validated transcript: 9 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:51:50.574306+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "running",
+          "started_at": "2026-10-12T13:51:50.593838+00:00",
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": "Routing analysis for transcript (9 words)",
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "waiting",
+          "started_at": null,
+          "finished_at": null,
+          "duration_ms": null,
+          "input_preview": null,
+          "output_preview": null,
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {}
+    },
+    {
+      "execution_id": "exec-8df5717fb402",
+      "correlation_id": "corr-70a31c78586f",
+      "user_id": "default_user",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "label": "Query: What did Sarah agree to?...",
+      "created_at": "2026-10-12T13:51:45.039554+00:00",
+      "start_time": "2026-10-12T13:51:45.038965+00:00",
+      "end_time": "2026-10-12T13:51:50.436893+00:00",
+      "total_duration_ms": 5398,
+      "steps": [
+        {
+          "key": "query_validation",
+          "agent_name": "Query Input Validator",
+          "role": "Input Check & Sanitization",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:51:45.038965+00:00",
+          "duration_ms": 5,
+          "input_preview": "What did Sarah agree to?",
+          "output_preview": "Valid query",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_retrieval",
+          "agent_name": "Qdrant Vector Retrieval",
+          "role": "Semantic Similarity Search",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:45.045420+00:00",
+          "finished_at": "2026-10-12T13:51:45.423826+00:00",
+          "duration_ms": 356,
+          "input_preview": "Query embedding & search: 'What did Sarah agree to?'",
+          "output_preview": "Retrieved 1 relevant memories (Top score: 60%)",
+          "error_message": null
+        },
+        {
+          "key": "memory_assistant",
+          "agent_name": "Memory Assistant Agent",
+          "role": "RAG Synthesis & Grounding",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:45.446475+00:00",
+          "finished_at": "2026-10-12T13:51:50.413853+00:00",
+          "duration_ms": 4945,
+          "input_preview": "Providing 1 citations to Memory Assistant Agent",
+          "output_preview": "Generated answer (42 words)",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Answer Delivery",
+          "role": "Format Verification & Citations",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:51:50.419234+00:00",
+          "duration_ms": 10,
+          "input_preview": null,
+          "output_preview": "Delivered answer with 1 grounded citations",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "answer": "Sarah agreed to **finalize the Qdrant specifications by Thursday**.\n\nThis comes from the **\"Test Sync\"** conversation (October 12, 2026), where Sarah, Elena, and the speaker met to discuss the latency target. The memory doesn't say whether a latency target was agreed on.",
+        "citations_count": 1
+      }
+    },
+    {
+      "execution_id": "exec-08bc60a536a1",
+      "correlation_id": "corr-7a3fec926a2d",
+      "user_id": "default_user",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "label": "Test Sync",
+      "created_at": "2026-10-12T13:51:02.646766+00:00",
+      "start_time": "2026-10-12T13:51:02.646766+00:00",
+      "end_time": "2026-10-12T13:51:44.106371+00:00",
+      "total_duration_ms": 41447,
+      "steps": [
+        {
+          "key": "voice_input",
+          "agent_name": "Voice / Text Ingestion",
+          "role": "Speech Capture & Validation",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:51:02.646766+00:00",
+          "duration_ms": 10,
+          "input_preview": "Source: MANUAL (105 chars)",
+          "output_preview": "Validated transcript: 18 words",
+          "error_message": null
+        },
+        {
+          "key": "transcript_processing",
+          "agent_name": "Transcript Processor",
+          "role": "Sanitization & Structuring",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": null,
+          "finished_at": "2026-10-12T13:51:02.646766+00:00",
+          "duration_ms": 15,
+          "input_preview": "Raw transcript text",
+          "output_preview": "Payload sanitized for multi-agent dispatch",
+          "error_message": null
+        },
+        {
+          "key": "manager",
+          "agent_name": "Manager Agent",
+          "role": "Routing & Work Allocation",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:02.659500+00:00",
+          "finished_at": "2026-10-12T13:51:15.788649+00:00",
+          "duration_ms": 13042,
+          "input_preview": "Routing analysis for transcript (18 words)",
+          "output_preview": "Decision: Summarizer=True, Tasks=True. Reason: The transcript is a meeting discussion that needs a summary, and it includes a task with an owner and deadline (Sarah will finalize the Qdrant specs by Thursday).",
+          "error_message": null
+        },
+        {
+          "key": "summarizer",
+          "agent_name": "Summarizer Agent",
+          "role": "Dialogue Synthesis & Facts",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:15.792915+00:00",
+          "finished_at": "2026-10-12T13:51:37.375529+00:00",
+          "duration_ms": 13718,
+          "input_preview": "Generating executive summary for dialogue (18 words)",
+          "output_preview": "Summary: **Summary**\nSarah, Elena, and the speaker met to discuss the latency target. Sarah agreed to finalize the Qdrant specifications by Thursday.... (0 facts, 1 topics)",
+          "error_message": null
+        },
+        {
+          "key": "task_extractor",
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Items & Deadlines",
+          "is_lyzr_agent": true,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:15.804698+00:00",
+          "finished_at": "2026-10-12T13:51:37.380531+00:00",
+          "duration_ms": 7839,
+          "input_preview": "Parsing transcript for commitments, owners, and deadlines",
+          "output_preview": "Extracted 1 action items",
+          "error_message": null
+        },
+        {
+          "key": "qdrant_memory",
+          "agent_name": "Qdrant Vector Pipeline",
+          "role": "Dense Embedding & Indexing",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:37.394451+00:00",
+          "finished_at": "2026-10-12T13:51:44.040371+00:00",
+          "duration_ms": 6634,
+          "input_preview": "Computing dense vector (384 dims)",
+          "output_preview": "Upserted point bdaa2f1a into Qdrant collection 'mindflow_memories'",
+          "error_message": null
+        },
+        {
+          "key": "final_response",
+          "agent_name": "Final Response Dispatch",
+          "role": "Persistence & UI Sync",
+          "is_lyzr_agent": false,
+          "status": "completed",
+          "started_at": "2026-10-12T13:51:44.045372+00:00",
+          "finished_at": "2026-10-12T13:51:44.091496+00:00",
+          "duration_ms": 10,
+          "input_preview": "Saving structured record and tasks to local state",
+          "output_preview": "Memory saved: 'Test Sync', 1 tasks synced",
+          "error_message": null
+        }
+      ],
+      "error": null,
+      "result": {
+        "memory_id": "bdaa2f1a-9403-45d1-827e-eb1c10768a38",
+        "conversation_id": "bc42bc29-be0f-4d6f-b245-8e1b5b870056",
+        "title": "Test Sync",
+        "summary": "**Summary**\nSarah, Elena, and the speaker met to discuss the latency target. Sarah agreed to finalize the Qdrant specifications by Thursday. The transcript does not say whether a latency target was agreed.\n\n**Key Points**\n- **Topic:** The latency target.\n- **Participants:** Sarah and Elena, plus the speaker.\n- **Action item:** Sarah is responsible for finalizing the Qdrant specs.\n- **Not stated:** The specific latency target value, and any conclusions about it.\n\n**Decisions**\n- Sarah will finalize the Qdrant specs (confirmed).\n- No other decisions are recorded, including a final latency target.\n\n**Important Dates**\n- **Thursday:** Sarah's deadline for the Qdrant specs.\n    - Based on today's date (Monday, October 12, 2026), this is likely Thursday, October 15, 2026.\n    - The exact date is not stated in the transcript.",
+        "tasks_count": 1
+      }
+    },
+    {
+      "execution_id": "exec-0195e449",
+      "correlation_id": "corr-116ab359",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "start_time": "2026-10-12T13:23:41.221677",
+      "end_time": "2026-10-12T13:23:41.221677",
+      "total_duration_ms": 2735,
+      "steps": [
+        {
+          "agent_name": "Qdrant Retrieval",
+          "role": "Vector Similarity Search",
+          "status": "completed",
+          "duration_ms": 2735,
+          "input_preview": "Query: 'What did Sarah and I agree on regarding Qdrant?...'",
+          "output_preview": "Retrieved 4 relevant memory chunks",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:23:41.221677"
+        },
+        {
+          "agent_name": "Manager Agent",
+          "role": "Context Gatekeeper",
+          "status": "completed",
+          "duration_ms": 621,
+          "input_preview": "Validating 4 retrieved memory chunks for query",
+          "output_preview": "Context validated. Routed to Memory Assistant Agent with citations",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:23:41.221677"
+        },
+        {
+          "agent_name": "Memory Assistant Agent",
+          "role": "Contextual QA Synthesizer",
+          "status": "completed",
+          "duration_ms": 621,
+          "input_preview": "Query + 4 grounding contexts",
+          "output_preview": "Synthesized response (34 words)",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:23:41.221677"
+        }
+      ]
+    },
+    {
+      "execution_id": "exec-9838fa60",
+      "correlation_id": "corr-a8cc3170",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "start_time": "2026-10-12T13:22:20.492459",
+      "end_time": "2026-10-12T13:22:20.492459",
+      "total_duration_ms": 52,
+      "steps": [
+        {
+          "agent_name": "Manager Agent",
+          "role": "Routing & Orchestration",
+          "status": "completed",
+          "duration_ms": 689,
+          "input_preview": "Transcript (12 words): 'Omi device test: checking webhook delivery and vector genera...'",
+          "output_preview": "Dispatched concurrent delegation to Summarizer and Task Extractor agents",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.439599"
+        },
+        {
+          "agent_name": "Summarizer Agent",
+          "role": "Synthesis & Fact Extraction",
+          "status": "completed",
+          "duration_ms": 690,
+          "input_preview": "Raw transcript (80 chars)",
+          "output_preview": "Summary: 'Discussion regarding Omi device test: checking webhook delivery and vector generation in MindFlow AI...'",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.440117"
+        },
+        {
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Item Detection",
+          "status": "completed",
+          "duration_ms": 690,
+          "input_preview": "Transcript text for commitments & deliverables",
+          "output_preview": "Extracted 1 actionable items (Follow up on Omi Automated Web)",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.440117"
+        },
+        {
+          "agent_name": "Vector Pipeline",
+          "role": "Qdrant Embedding & Upsert",
+          "status": "completed",
+          "duration_ms": 19,
+          "input_preview": "384-dim semantic embedding vector generated",
+          "output_preview": "Indexed point mem-0c8439 in mindflow_memories",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.459901"
+        }
+      ]
+    },
+    {
+      "execution_id": "exec-3c888c01",
+      "correlation_id": "corr-e4da30f0",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "start_time": "2026-10-12T13:22:20.425102",
+      "end_time": "2026-10-12T13:22:20.425102",
+      "total_duration_ms": 93,
+      "steps": [
+        {
+          "agent_name": "Qdrant Retrieval",
+          "role": "Vector Similarity Search",
+          "status": "completed",
+          "duration_ms": 93,
+          "input_preview": "Query: 'What did Elena schedule?...'",
+          "output_preview": "Retrieved 3 relevant memory chunks",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.425102"
+        },
+        {
+          "agent_name": "Manager Agent",
+          "role": "Context Gatekeeper",
+          "status": "completed",
+          "duration_ms": 675,
+          "input_preview": "Validating 3 retrieved memory chunks for query",
+          "output_preview": "Context validated. Routed to Memory Assistant Agent with citations",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.425102"
+        },
+        {
+          "agent_name": "Memory Assistant Agent",
+          "role": "Contextual QA Synthesizer",
+          "status": "completed",
+          "duration_ms": 675,
+          "input_preview": "Query + 3 grounding contexts",
+          "output_preview": "Synthesized response (38 words)",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.425102"
+        }
+      ]
+    },
+    {
+      "execution_id": "exec-b435c555",
+      "correlation_id": "corr-d0f70f00",
+      "workflow_type": "transcript_ingestion",
+      "status": "completed",
+      "start_time": "2026-10-12T13:22:20.301749",
+      "end_time": "2026-10-12T13:22:20.301749",
+      "total_duration_ms": 37,
+      "steps": [
+        {
+          "agent_name": "Manager Agent",
+          "role": "Routing & Orchestration",
+          "status": "completed",
+          "duration_ms": 513,
+          "input_preview": "Transcript (17 words): 'Test note: Elena scheduled the API testing for Friday mornin...'",
+          "output_preview": "Dispatched concurrent delegation to Summarizer and Task Extractor agents",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.263974"
+        },
+        {
+          "agent_name": "Summarizer Agent",
+          "role": "Synthesis & Fact Extraction",
+          "status": "completed",
+          "duration_ms": 513,
+          "input_preview": "Raw transcript (108 chars)",
+          "output_preview": "Summary: 'Discussion regarding Test note: Elena scheduled the API testing for Friday morning. Coordinated stra...'",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.263974"
+        },
+        {
+          "agent_name": "Task Extractor Agent",
+          "role": "Action Item Detection",
+          "status": "completed",
+          "duration_ms": 513,
+          "input_preview": "Transcript text for commitments & deliverables",
+          "output_preview": "Extracted 1 actionable items (Follow up on Automated Test Vo)",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.263974"
+        },
+        {
+          "agent_name": "Vector Pipeline",
+          "role": "Qdrant Embedding & Upsert",
+          "status": "completed",
+          "duration_ms": 19,
+          "input_preview": "384-dim semantic embedding vector generated",
+          "output_preview": "Indexed point mem-59eb52 in mindflow_memories",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:22:20.283562"
+        }
+      ]
+    },
+    {
+      "execution_id": "exec-01503915",
+      "correlation_id": "corr-065f8449",
+      "workflow_type": "chat_query",
+      "status": "completed",
+      "start_time": "2026-10-12T13:21:34.241427",
+      "end_time": "2026-10-12T13:21:34.241427",
+      "total_duration_ms": 66,
+      "steps": [
+        {
+          "agent_name": "Qdrant Retrieval",
+          "role": "Vector Similarity Search",
+          "status": "completed",
+          "duration_ms": 66,
+          "input_preview": "Query: 'What did Elena schedule?...'",
+          "output_preview": "Retrieved 2 relevant memory chunks",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:21:34.241427"
+        },
+        {
+          "agent_name": "Manager Agent",
+          "role": "Context Gatekeeper",
+          "status": "completed",
+          "duration_ms": 691,
+          "input_preview": "Validating 2 retrieved memory chunks for query",
+          "output_preview": "Context validated. Routed to Memory Assistant Agent with citations",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:21:34.241427"
+        },
+        {
+          "agent_name": "Memory Assistant Agent",
+          "role": "Contextual QA Synthesizer",
+          "status": "completed",
+          "duration_ms": 691,
+          "input_preview": "Query + 2 grounding contexts",
+          "output_preview": "Synthesized response (63 words)",
+          "error_message": null,
+          "timestamp": "2026-10-12T13:21:34.241427"
+        }
+      ]
+    }
+  ],
+  "omi_processed": {
+    "omi_conv_omi_test_conv_99": {
+      "status": "processing",
+      "at": "2026-10-12T13:51:50.567945+00:00"
+    },
+    "omi_conv_a60713d7-47c5-4c8d-a1bd-635ff4df603d": {
+      "status": "completed",
+      "at": "2026-10-12T14:24:31.782131+00:00",
+      "execution_id": "exec-omi-a676b536"
+    },
+    "omi_conv_test-conv-01": {
+      "status": "processing",
+      "at": "2026-10-13T07:34:38.912274+00:00"
+    }
+  }
+}
