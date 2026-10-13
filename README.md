@@ -157,7 +157,26 @@ Open [http://localhost:5173](http://localhost:5173) in your browser. The UI will
 
 ---
 
-## 5. API Reference & Endpoints
+## 5. Vercel Deployment Guide
+
+MindFlow AI is pre-configured with root and directory-level `vercel.json` configurations for instant deployment on Vercel:
+
+### Option A: Monorepo Deployment (Frontend + FastAPI on Vercel)
+1. Import repository `Boini-shiva/mindflow-ai` on [Vercel](https://vercel.com).
+2. Keep Root Directory as `./`.
+3. Vercel builds the React frontend (`frontend/dist`) and maps API requests (`/api/*`, `/health`, `/omi/*`) to the FastAPI serverless function (`api/index.py`).
+4. Set your environment variables in Vercel project settings (`LYZR_API_KEY`, `QDRANT_URL`, `QDRANT_API_KEY`, etc.).
+5. Deploy!
+
+### Option B: Split Deployment (Frontend on Vercel + Backend on Render/Railway)
+1. Deploy `backend` on Render/Railway/Fly.io.
+2. Deploy `frontend` on Vercel with Root Directory set to `frontend`.
+3. In Vercel Environment Variables, set `VITE_API_BASE_URL` to your hosted backend URL.
+4. Detailed step-by-step instructions are available in [VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md).
+
+---
+
+## 6. API Reference & Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
@@ -178,7 +197,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser. The UI will
 
 ---
 
-## 6. Testing Omi Webhooks Locally
+## 7. Testing Omi Webhooks Locally
 
 You can test Omi webhook deliveries without wearable hardware using PowerShell:
 
@@ -196,7 +215,7 @@ Invoke-RestMethod -Uri "http://localhost:8000/omi/conversation" `
 
 ---
 
-## 7. Troubleshooting
+## 8. Troubleshooting
 
 ### 1. Lyzr Agents
 - **Issue**: Agent execution returns non-200 or timeout.
@@ -212,7 +231,7 @@ Invoke-RestMethod -Uri "http://localhost:8000/omi/conversation" `
 
 ---
 
-## 8. Security & Privacy Guarantees
+## 9. Security & Privacy Guarantees
 
 1. **No Frontend Secrets**: API keys never reach browser bundles.
 2. **Tenant Isolation**: Qdrant vectors and storage records are strictly segmented by `user_id`.

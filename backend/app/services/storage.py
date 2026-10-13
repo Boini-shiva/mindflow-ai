@@ -21,7 +21,15 @@ class StorageService:
         self.path = self.data_dir / "mindflow_store.json"
         self._lock = threading.RLock()
         if not self.path.exists():
-            self._save(dict(_EMPTY))
+            seed_path = settings.BACKEND_DIR / "data" / "mindflow_store.json"
+            if seed_path.exists() and seed_path.resolve() != self.path.resolve():
+                try:
+                    import shutil
+                    shutil.copy2(seed_path, self.path)
+                except Exception:
+                    self._save(dict(_EMPTY))
+            else:
+                self._save(dict(_EMPTY))
 
     # ------------------------------------------------------------ low level
     def _load(self) -> Dict[str, Any]:

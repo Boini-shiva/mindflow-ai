@@ -9,7 +9,20 @@ import {
   WorkflowExecution
 } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+const getApiBaseUrl = (): string => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (typeof envUrl === 'string' && envUrl.trim().length > 0) {
+    return envUrl.trim().replace(/\/+$/, '');
+  }
+  // In production builds without explicit VITE_API_BASE_URL, use relative origin for Vercel rewrites/serverless
+  if (import.meta.env.PROD) {
+    return '';
+  }
+  // Default to local development FastAPI server
+  return 'http://127.0.0.1:8000';
+};
+
+const API_BASE_URL = getApiBaseUrl();
 
 class ApiService {
   private isBackendOnline: boolean = false;

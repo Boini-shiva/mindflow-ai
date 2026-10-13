@@ -166,25 +166,6 @@ class TranscriptIngestRequest(BaseModel):
         return v
 
 
-# ---------------------------------------------------------------- Integrations
-class IntegrationItemStatus(BaseModel):
-    name: str
-    status: str
-    is_live: bool
-    details: str = ""
-    last_tested: Optional[str] = None
-
-
-class IntegrationsHealthResponse(BaseModel):
-    backend_ok: bool
-    mode: str
-    lyzr: IntegrationItemStatus
-    qdrant: IntegrationItemStatus
-    omi: IntegrationItemStatus
-    embedding: IntegrationItemStatus
-    timestamp: Optional[str] = None
-
-
 # ---------------------------------------------------------------- Agents / system
 class AgentInfo(BaseModel):
     key: str

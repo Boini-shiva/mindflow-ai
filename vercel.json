@@ -1,0 +1,27 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/omi/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/webhook/(.*)",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/((?!api/|health|omi/|webhook/).*)",
+      "destination": "/index.html"
+    }
+  ]
+}

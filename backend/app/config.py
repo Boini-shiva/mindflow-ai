@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Optional, List
 
@@ -49,7 +50,7 @@ class Settings(BaseSettings):
     # Single-user local demo identity (see README "Authentication limitations").
     DEFAULT_USER_ID: str = "default_user"
 
-    DATA_DIR: Path = BACKEND_DIR / "data"
+    DATA_DIR: Path = Path("/tmp/mindflow_data") if os.environ.get("VERCEL") else (BACKEND_DIR / "data")
 
     model_config = SettingsConfigDict(
         env_file=str(BACKEND_DIR / ".env"),

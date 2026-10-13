@@ -1,5 +1,4 @@
 from fastapi import APIRouter, HTTPException
-import uuid
 from datetime import datetime
 from app.models.schemas import IntegrationsHealthResponse, IntegrationItemStatus
 from app.config import settings
@@ -10,8 +9,8 @@ router = APIRouter(prefix="/api/integrations", tags=["Integrations"])
 
 @router.get("/status", response_model=IntegrationsHealthResponse)
 def get_integrations_status():
-    lyzr_live = lyzr_service.is_agent_configured("manager")
-    qdrant_live = qdrant_service.is_configured()
+    lyzr_live = lyzr_service.is_configured()
+    qdrant_live = qdrant_service.is_live()
 
     lyzr_item = IntegrationItemStatus(
         name="Lyzr Multi-Agent AI",
@@ -60,22 +59,21 @@ def get_integrations_status():
 @router.post("/test/{service_name}")
 async def test_single_integration(service_name: str):
     service_name = service_name.lower()
-
+    
     if service_name == "lyzr":
-        if lyzr_service.is_agent_configured("manager"):
-            res = await lyzr_service.call_agent(
-                "manager",
-                "Health ping test",
-                f"ping-{uuid.uuid4().hex[:8]}"
+        if lyzr_service.is_configured():
+            ok, resp, dur, err = await lyzr_service.call_agent(
+                agent_id=lyzr_service.manager_agent_id or lyzr_service.summarizer_agent_id,
+                message="Health ping test"
             )
-            if res.ok:
-                return {"success": True, "message": f"Successfully connected to Lyzr Agent ({res.duration_ms}ms)."}
+            if ok:
+                return {"success": True, "message": f"Successfully connected to Lyzr Agent ({dur}ms)."}
             else:
-                return {"success": False, "message": f"Lyzr ping returned: {res.error_message}"}
+                return {"success": False, "message": f"Lyzr ping returned: {err}"}
         return {"success": True, "message": "Lyzr Demo mode verified. Add LYZR_API_KEY in backend/.env for live cloud execution."}
 
     elif service_name == "qdrant":
-        if qdrant_service.is_configured():
+        if qdrant_service.is_live():
             return {"success": True, "message": f"Successfully connected to Qdrant Cloud. Collection '{settings.QDRANT_COLLECTION}' verified."}
         return {"success": True, "message": "Local vector store verified. Add QDRANT_URL & QDRANT_API_KEY in backend/.env for cloud persistence."}
 

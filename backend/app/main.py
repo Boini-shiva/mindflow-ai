@@ -8,7 +8,6 @@ from app.routers import (
     agents,
     chat,
     health,
-    integrations,
     memories,
     omi,
     tasks,
@@ -48,10 +47,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# CORS configuration
+# CORS configuration (permits local dev, preview branches, and custom domains with credentials)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Permits local development and configured FRONTEND_ORIGIN
+    allow_origin_regex=r"^https?://.*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -64,7 +63,6 @@ app.include_router(transcripts.router)
 app.include_router(tasks.router)
 app.include_router(chat.router)
 app.include_router(agents.router)
-app.include_router(integrations.router)
 app.include_router(omi.router)
 app.include_router(omi.router, prefix="/webhook")
 
